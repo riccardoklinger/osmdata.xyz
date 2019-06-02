@@ -1,0 +1,5 @@
+#This example script exports features from a osm2pgsql-Database to GeoPackage
+#Example for aerialway to point, line, polygon
+ogr2ogr -f "GPKG" aerialway_point.gpkg PG:"host=localhost dbname=DBname user=DBuser password=DBpassword" -sql "select * from planet_osm_point where aerialway is not null"
+ogr2ogr -f "GPKG" aerialway_line.gpkg PG:"host=localhost dbname=DBname user=DBuser password=DBpassword" -sql "select * from planet_osm_line where aerialway is not null"
+ogr2ogr -f "GPKG" aerialway_polygon.gpkg PG:"host=localhost dbname=DBname user=DBuser password=DBpassword" -sql "select * from planet_osm_polygon where aerialway is not null"
