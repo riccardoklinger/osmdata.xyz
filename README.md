@@ -12,6 +12,6 @@ This project is intended to provide the OpenStreetMap data for the whole world d
 - osmium
 - gdal / ogr2ogr
 
-## Data
+## Data basis
 - primary (map) features? --> https://wiki.openstreetmap.org/wiki/Map_Features
 - planet file as osm.pbf --> https://planet.openstreetmap.org/
