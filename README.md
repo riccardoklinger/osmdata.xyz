@@ -1,6 +1,9 @@
 # osmdata.xyz | global osm extracts
 This project deals with extracting all primary features regarding the openstreetmap project and their related tags to geopackage.
 
+## Extracts are available on
+https://download.osmdata.xyz/
+
 ## Why
 OpenStreetMap (OSM) offers an amazing collection of data. The information contained provides many possibilities to better understand the whole world, e.g. with the use of a geographic information system (GIS). There are many tools to create small extracts from the OSM data: overpass-turbo (API) or other tools in QGIS/ArcGIS. A bigger challenge is the creation of GIS-compatible data sets from OSM, which cover whole countries, continents or even the whole world.
 
