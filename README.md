@@ -1,4 +1,4 @@
-# osm2geopackage
+# osmdata.xyz | global osm extracts
 This project deals with extracting all primary features regarding the openstreetmap project and their related tags to geopackage.
 
 ## Why
