@@ -1,0 +1,38 @@
+
+#installation of needed packages | please check the version of postgres and postgis you would like to use.
+apt-get update
+apt-get install -y aptitude
+aptitude update
+aptitude install -y nano axel screen p7zip-full osmium-tool osm2pgsql htop vnstat gdal-bin postgresql-10-postgis-2.4 postgresql-10-postgis-2.4-scripts
+
+#add user
+adduser osmdata
+
+#PGSQL to change the password for postgres user
+su postgres
+psql
+\password
+
+#Stay in psql promt
+#Add user and database in postgis
+CREATE USER osmdata WITH
+	LOGIN
+	NOSUPERUSER
+	NOCREATEDB
+	NOCREATEROLE
+	INHERIT
+	NOREPLICATION
+	CONNECTION LIMIT -1;
+
+CREATE DATABASE osmdatabase
+    WITH 
+    OWNER = osmdata
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
+
+\q
+psql -d osmdatabase
+
+CREATE EXTENSION postgis;
+
+CREATE EXTENSION hstore;
