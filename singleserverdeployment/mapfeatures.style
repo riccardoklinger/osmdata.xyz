@@ -1,0 +1,318 @@
+# This is the default osm2pgsql .style file that comes with osm2pgsql.
+#
+# A .style file has 4 columns that define how OSM objects end up in tables in
+# the database and what columns are created. It interacts with the command-line
+# hstore options.
+#
+# Columns
+# =======
+#
+# OsmType: This is either "node", "way" or "node,way" and indicates if this tag
+# applies to nodes, ways, or both.
+#
+# Tag: The tag
+#
+# DataType: The type of the column to be created. Normally "text"
+#
+# Flags: Flags that indicate what table the OSM object is moved into.
+#
+# There are 6 possible flags. These flags are used both to indicate if a column
+# should be created, and if ways with the tag are assumed to be areas. The area
+# assumptions can be overridden with an area=yes/no tag
+#
+# polygon - Create a column for this tag, and objects with the tag are areas
+#
+# linear - Create a column for this tag
+#
+# nocolumn - Override the above and don't create a column for the tag, but do
+# include objects with this tag
+#
+# phstore - Same as polygon,nocolumn for backward compatibility
+#
+# delete - Drop this tag completely and don't create a column for it. This also
+# prevents the tag from being added to hstore columns
+#
+# nocache - Deprecated and does nothing
+#
+# If an object has a tag that indicates it is an area or has area=yes/1,
+# osm2pgsql will try to turn it into an area. If it succeeds, it places it in
+# the polygon table. If it fails (e.g. not a closed way) it places it in the
+# line table.
+#
+# Nodes are never placed into the polygon or line table and are always placed in
+# the point table.
+#
+# Hstore
+# ======
+#
+# The options --hstore, --hstore-match-only, and --hstore-all interact with
+# the .style file.
+#
+# With --hstore any tags without a column will be added to the hstore column.
+# This will also cause all objects to be kept.
+#
+# With --hstore-match-only the behavior for tags is the same, but objects are
+# only kept if they have a non-NULL value in one of the columns.
+#
+# With --hstore-all all tags are added to the hstore column unless they appear
+# in the style file with a delete flag, causing duplication between the normal
+# columns and the hstore column.
+#
+# Special database columns
+# ========================
+#
+# There are some special database columns that if present in the .style file
+# will be populated by osm2pgsql.
+#
+# These are
+#
+# z_order - datatype int4
+#
+# way_area - datatype real. The area of the way, in the units of the projection
+# (e.g. square mercator meters). Only applies to areas
+#
+# osm_user - datatype text
+# osm_uid - datatype integer
+# osm_version - datatype integer
+# osm_changeset - datatype integer
+# osm_timestamp - datatype timestamptz(0).
+# Used with the --extra-attributes option to include metadata in the database.
+# If importing with both --hstore and --extra-attributes the meta-data will
+# end up in the tags hstore column regardless of the style file.
+
+# OsmType	Tag	DataType	Flags
+node,way	name	text	linear
+node,way	aerialway	text	linear
+node,way	occupancy	text	linear
+node,way	aerialway:capacity	text	linear
+node,way	aerialway:duration	text	linear
+node,way	aerialway:detachable	text	linear
+node,way	aerialway:bubble	text	linear
+node,way	aerialway:heating	text	linear
+node,way	aerialway:summer:access	text	linear
+node,way	aeroway	text	linear
+node,way	airmark	text	linear
+node,way	operator	text	linear
+node,way	amenity	text	polygon
+node,way	barrier	text	linear
+node,way	maxwidth	text	linear
+node,way	width	text	linear
+node,way	maxheight	text	linear
+node,way	height	text	linear
+node,way	wheelchair	text	linear
+node,way	boundary	text	linear
+node,way	admin_level	text	linear
+node,way	border_type	text	linear
+node,way	start_date	text	linear
+node,way	end_date	text	linear
+node,way	fire_boundary	text	linear
+node,way	building	text	polygon
+node,way	entrance	text	polygon
+node,way	building:levels	text	polygon
+node,way	building:architecture	text	polygon
+node,way	building:use	text	polygon
+node,way	addr	text	linear
+node,way	addr:housenumber	text	linear
+node,way	addr:housename	text	linear
+node,way	addr:flats	text	linear
+node,way	addr:conscriptionnumber	text	linear
+node,way	addr:street	text	linear
+node,way	addr:place	text	linear
+node,way	addr:postcode	text	linear
+node,way	addr:city	text	linear
+node,way	addr:country	text	linear
+node,way	addr:full	text	linear
+node,way	addr:hamlet	text	linear
+node,way	addr:suburb	text	linear
+node,way	addr:subdistrict	text	linear
+node,way	addr:district	text	linear
+node,way	addr:province	text	linear
+node,way	addr:state	text	linear
+node,way	addr:interpolation	text	linear
+node,way	addr:inclusion	text	linear
+node,way	addr:door	text	linear
+node,way	addr:unit	text	linear
+node,way	addr:floor	text	linear
+node,way	addr:block	text	linear
+node,way	craft	text	linear
+node,way	opening_hours	text	linear
+node,way	phone	text	linear
+node,way	website	text	linear
+node,way	emergency	text	polygon
+node,way	geological	text	polygon
+node,way	highway	text	linear
+node,way	sidewalk	text	linear
+node,way	cycleway	text	linear
+node,way	busway	text	linear
+node,way	abutters	text	linear
+node,way	bicycle_road	text	linear
+node,way	driving_side	text	linear
+node,way	ford	text	linear
+node,way	ice_road	text	linear
+node,way	incline	text	linear
+node,way	junction	text	linear
+node,way	lanes	text	linear
+node,way	lit	text	linear
+node,way	motorroad	text	linear
+node,way	mountain_pass	text	linear
+node,way	mtb:scale	text	linear
+node,way	mtb:scale:uphill	text	linear
+node,way	mtb:scale:imba	text	linear
+node,way	mtb:description	text	linear
+node,way	overtaking	text	linear
+node,way	parking:condition	text	linear
+node,way	parking:lane	text	linear
+node,way	passing_places	text	linear
+node,way	sac_scale	text	linear
+node,way	service	text	linear
+node,way	surface	text	linear
+node,way	tactile_paving	text	linear
+node,way	tracktype	text	linear
+node,way	traffic_calming	text	linear
+node,way	trail_visibility	text	linear
+node,way	winter_road	text	linear
+node,way	access	text	linear
+node,way	maxspeed	text	linear
+node,way	maxweight	text	linear
+node,way	oneway	text	linear
+node,way	historic	text	linear
+node,way	heritage	text	linear
+node,way	landuse	text	polygon
+node,way	leisure	text	polygon
+node,way	man_made	text	polygon
+node,way	military	text	polygon
+node,way	natural	text	polygon
+node,way	office	text	polygon
+node,way	brand	text	polygon
+node,way	fax	text	polygon
+node,way	club	text	polygon
+node,way	place	text	polygon
+node,way	population	text	polygon
+node,way	wikidata	text	polygon
+node,way	wikipedia	text	polygon
+node,way	power	text	linear
+node,way	public_transport	text	linear
+node,way	railway	text	linear
+node,way	bridge	text	linear
+node,way	cutting	text	linear
+node,way	electrified	text	linear
+node,way	embankment	text	linear
+node,way	frequency	text	linear
+node,way	railway:track_ref	text	linear
+node,way	tracks	text	linear
+node,way	tunnel	text	linear
+node,way	usage	text	linear
+node,way	voltage	text	linear
+node,way	route	text	linear
+node,way	origin	text	polygon
+node,way	shop	text	polygon
+node,way	wholesale	text	polygon
+node,way	level	text	polygon
+node,way	sport	text	polygon
+node,way	telcom	text	polygon
+node,way	tourism	text	polygon
+node,way	fee	text	polygon
+node,way	waterway	text	polygon
+node,way	intermittent	text	polygon
+node,way	seasonal	text	polygon
+node,way	destination	text	polygon
+node,way	lock	text	polygon
+node,way	mooring	text	polygon
+node,way	water	text	polygon
+node,way	int_name	text	polygon
+node,way	loc_name	text	polygon
+node,way	nat_name	text	polygon
+node,way	official_name	text	polygon
+node,way	old_name	text	polygon
+node,way	reg_name	text	polygon
+node,way	short_name	text	polygon
+node,way	sorting_name	text	polygon
+node,way	ele	text	polygon
+node,way	location	text	polygon
+node,way	agricultural	text	linear
+node,way	atv	text	linear
+node,way	bdouble	text	polygon
+node,way	bicycle	text	linear
+node,way	boat	text	polygon
+node,way	foot	text	linear
+node,way	forestry	text	linear
+node,way	toll	text	linear
+node,way 	capital	text	linear
+node,way	layer	text	linear
+node,way   z_order      int4         linear # This is calculated during import
+way        way_area     real         linear # This is calculated during import
+
+# Area tags
+# We don't make columns for these tags, but objects with them are areas.
+# Mainly for use with hstore
+
+
+# Deleted tags
+# These are tags that are generally regarded as useless for most rendering.
+# Most of them are from imports or intended as internal information for mappers
+# Some of them are automatically deleted by editors.
+# If you want some of them, perhaps for a debugging layer, just delete the lines.
+
+# These tags are used by mappers to keep track of data.
+# They aren't very useful for rendering.
+node,way    note                    text    delete
+node,way    note:*                  text    delete
+node,way    source                  text    delete
+node,way    source_ref              text    delete
+node,way    source:*                text    delete
+node,way    attribution             text    delete
+node,way    comment                 text    delete
+node,way    fixme                   text    delete
+
+# Tags generally dropped by editors, not otherwise covered
+node,way    created_by              text    delete
+node,way    odbl                    text    delete
+node,way    odbl:note               text    delete
+node,way    SK53_bulk:load          text    delete
+
+# Lots of import tags
+# TIGER (US)
+node,way    tiger:*                 text    delete
+
+# NHD (US)
+# NHD has been converted every way imaginable
+node,way    NHD:*                   text    delete
+node,way    nhd:*                   text    delete
+
+# GNIS (US)
+node,way    gnis:*                  text    delete
+
+# Geobase (CA)
+node,way    geobase:*               text    delete
+# NHN (CA)
+node,way    accuracy:meters         text    delete
+node,way    sub_sea:type            text    delete
+node,way    waterway:type           text    delete
+
+# KSJ2 (JA)
+# See also note:ja and source_ref above
+node,way    KSJ2:*                  text    delete
+# Yahoo/ALPS (JA)
+node,way    yh:*                    text    delete
+
+# osak (DK)
+node,way    osak:*                  text    delete
+
+# kms (DK)
+node,way    kms:*                   text    delete
+
+# ngbe (ES)
+# See also note:es and source:file above
+node,way    ngbe:*                  text    delete
+
+# naptan (UK)
+node,way    naptan:*                text    delete
+
+# Corine (CLC) (Europe)
+node,way    CLC:*                   text    delete
+
+# misc
+node,way    3dshapes:ggmodelk       text    delete
+node,way    AND_nosr_r              text    delete
+node,way    import                  text    delete
+node,way    it:fvg:*                text    delete
