@@ -1,0 +1,5 @@
+#Login as osmdata user
+mkdir pbf
+mkdir gpkg
+cd /home/osmdata/pbf
+screen -S osmget axel -n 2 -a -v https://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/pbf/planet-latest.osm.pbf
