@@ -19,6 +19,6 @@ This project is intended to provide the OpenStreetMap data for the whole world d
 - primary (map) features? --> https://wiki.openstreetmap.org/wiki/Map_Features
 - planet file as osm.pbf --> https://planet.openstreetmap.org/
 
-##Copyright and License 
+## Copyright and License 
 OpenStreetMap© is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF). 
 https://www.openstreetmap.org/copyright/en
