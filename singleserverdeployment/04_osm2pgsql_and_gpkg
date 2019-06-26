@@ -2,6 +2,7 @@
 #please check how much RAM and CPU cores your machine has. Please adjust "-C" regarding RAM and "--number-processes" regarding CPU cores
 #Don't forget to set the passwords for the database user
 #Run this script as osmdata user
+# mapfeatures.style file is provided
 
 osm2pgsql --slim -r pbf -S mapfeatures.style -C 14000 -l --number-processes 4 -U osmdata --create --multi-geometry --keep-coastlines -d osmdatabase planet-latest_aerialway.osm.pbf
 ogr2ogr -f "GPKG" /home/osmdata/gpkg/aerialway_EPSG4326_point.gpkg PG:"host=localhost dbname=osmdatabase user=osmdata password=*******" -sql "select * from planet_osm_point where aerialway is not null"
