@@ -4,7 +4,7 @@ This project deals with extracting all primary features regarding the openstreet
 ## Extracts are available on
 https://download.osmdata.xyz/
 
-Every two months, new extracts will be provides. 
+Every two months, new extracts will be provided. 
 
 Why not every month or in a higher frequency? - A full excerpt takes almost two weeks and requires high resources of CPU, RAM and SSD memory. Since it can't be delivered faster and costs money at the same time, I chose a two-month cycle. 
 
