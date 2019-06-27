@@ -6,7 +6,7 @@ https://download.osmdata.xyz/
 
 Every two months, new extracts will be provided. 
 
-Why not every month or in a higher frequency? - A full excerpt takes almost two weeks and requires high resources of CPU, RAM and SSD memory. Since it can't be delivered faster and costs money at the same time, I chose a two-month cycle. 
+Why not every month or in a higher frequency? - A full extract takes almost two weeks and requires high resources of CPU, RAM and SSD memory. Since it can't be delivered faster and costs money at the same time, I chose a two-month cycle. 
 
 ## Why
 OpenStreetMap (OSM) offers an amazing collection of data. The information contained provides many possibilities to better understand the whole world, e.g. with the use of a geographic information system (GIS). There are many tools to create small extracts from the OSM data: overpass-turbo (API) or other tools in QGIS/ArcGIS. A bigger challenge is the creation of GIS-compatible data sets from OSM, which cover whole countries, continents or even the whole world.
