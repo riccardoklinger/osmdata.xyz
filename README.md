@@ -13,6 +13,8 @@ OpenStreetMap (OSM) offers an amazing collection of data. The information contai
 
 This project is intended to provide the OpenStreetMap data for the whole world directly usable in a GIS. The data extracts are based on the primary map features. Each excerpt represents a key value, whereby all tags are always contained in the same way. This way you can also discover entries that may be untypical.
 
+This project is my hobby, absolutely non-commercial. I'm happy to share open data, knowledge and insights.
+
 ## Utilized tools to create extracts
 - osm2pgsql --> https://wiki.openstreetmap.org/wiki/Osm2pgsql
 - PostGIS / PostgreSQL --> https://postgis.net/
