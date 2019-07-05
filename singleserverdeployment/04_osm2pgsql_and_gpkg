@@ -4,10 +4,15 @@
 #Run this script as osmdata user
 # mapfeatures.style file is provided
 
+#loading pbf into postgis
 osm2pgsql --slim -r pbf -S mapfeatures.style -C 14000 -l --number-processes 4 -U osmdata --create --multi-geometry --keep-coastlines -d osmdatabase planet-latest_aerialway.osm.pbf
+
+#query features and write each geometry type into a geopackage
 ogr2ogr -f "GPKG" /home/osmdata/gpkg/aerialway_EPSG4326_point.gpkg PG:"host=localhost dbname=osmdatabase user=osmdata password=*******" -sql "select * from planet_osm_point where aerialway is not null"
 ogr2ogr -f "GPKG" /home/osmdata/gpkg/aerialway_EPSG4326_line.gpkg PG:"host=localhost dbname=osmdatabase user=osmdata password=*******" -sql "select * from planet_osm_line where aerialway is not null"
 ogr2ogr -f "GPKG" /home/osmdata/gpkg/aerialway_EPSG4326_polygon.gpkg PG:"host=localhost dbname=osmdatabase user=osmdata password=*******" -sql "select * from planet_osm_polygon where aerialway is not null"
+
+#drop tables, it is faster than overwriting by osm2pgsql
 psql -d osmdatabase -c "DROP TABLE planet_osm_point"
 psql -d osmdatabase -c "DROP TABLE planet_osm_line"
 psql -d osmdatabase -c "DROP TABLE planet_osm_polygon"
