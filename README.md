@@ -4,7 +4,7 @@ This project deals with extracting all primary features regarding the openstreet
 ## Extracts are available on
 https://download.osmdata.xyz/
 
-In a monthly cylce, new extracts will be provided. The first planet dump of each month from openstreetmap.org will be available 10 days later, sonce it takes a while to process the data.
+In a monthly cycle new extracts are provided. The first Planet Dump of each month from openstreetmap.org will be available 10 days later as it takes a while for the data to be processed.
 
 ## Why
 OpenStreetMap (OSM) offers an amazing collection of data. The information contained provides many possibilities to better understand the whole world, e.g. with the use of a geographic information system (GIS). There are many tools to create small extracts from the OSM data: overpass-turbo (API) or other tools in QGIS/ArcGIS. A bigger challenge is the creation of GIS-compatible data sets from OSM, which cover whole countries, continents or even the whole world.
