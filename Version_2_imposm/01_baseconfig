@@ -1,0 +1,40 @@
+#installation of needed packages | please check the version of postgres and postgis you would like to use.
+apt-get update && apt-get install -y aptitude && aptitude update && aptitude install -y nano axel wput screen p7zip-full osmium-tool htop vnstat gdal-bin postgresql-10-postgis-2.4 postgresql-10-postgis-2.4-scripts
+
+#add user
+adduser osmdata
+
+mkdir /home/osmdata/pbf/
+
+#Installation of imposm3
+#Download imposm3 here: https://github.com/omniscale/imposm3/releases
+tar -xf *imposm_Download*
+mv *imposm_Download* /home/osmdata/pbf
+
+#PGSQL to change the password for postgres user
+su postgres
+psql
+\password
+
+#Stay in psql promt
+#Add user and database in postgis
+CREATE USER osmdata WITH
+	LOGIN
+	NOSUPERUSER
+	NOCREATEDB
+	NOCREATEROLE
+	INHERIT
+	NOREPLICATION
+	CONNECTION LIMIT -1;
+
+CREATE DATABASE osmdatabase
+    WITH 
+    OWNER = osmdata
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
+
+\q
+psql -d osmdatabase -c "CREATE EXTENSION postgis;"
+psql -d osmdatabase -c "CREATE EXTENSION hstore;"
+psql -d osmdatabase -c "CREATE SCHEMA import;"
+psql -d osmdatabase -c "ALTER SCHEMA import OWNER TO osmdata;"
