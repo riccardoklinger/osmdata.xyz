@@ -1,6 +1,8 @@
 # osmdata.xyz | global osm extracts
 This project deals with extracting all primary features regarding the openstreetmap project and their related tags to geopackage.
 
+New processing chain: imposm3 is used since the extracts from 20190805.
+
 ## Extracts are available on
 https://download.osmdata.xyz/
 
@@ -14,10 +16,12 @@ This project is intended to provide the OpenStreetMap data for the whole world d
 This project is my hobby and absolutely non-commercial. I'm happy to share open data, knowledge and insights.
 
 ## Utilized tools to create extracts
-- osm2pgsql --> https://wiki.openstreetmap.org/wiki/Osm2pgsql
+- imposm3 --> https://github.com/omniscale/imposm3 (see Version 2 since 20190805)
 - PostGIS / PostgreSQL --> https://postgis.net/
 - osmium --> https://osmcode.org/osmium-tool/
 - gdal / ogr2ogr --> https://gdal.org/programs/ogr2ogr.html
+
+- osm2pgsql --> https://wiki.openstreetmap.org/wiki/Osm2pgsql (used in Version 1)
 
 ## Data basis
 - primary (map) features? --> https://wiki.openstreetmap.org/wiki/Map_Features
