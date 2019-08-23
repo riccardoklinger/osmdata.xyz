@@ -1,7 +1,7 @@
 # osmdata.xyz | global osm extracts
 This project deals with extracting all primary features regarding the openstreetmap project and their related tags to geopackage.
 
-New processing chain: imposm3 is used since the extracts from 20190805.
+update - New processing chain: imposm3 is used since the extracts from 20190805.
 
 ## Extracts are available on
 https://download.osmdata.xyz/
