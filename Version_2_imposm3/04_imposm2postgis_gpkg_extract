@@ -20,9 +20,9 @@ psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
 
 ./imposm3 import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:**************@localhost/osmdatabase -read planet-latest_natural.osm.pbf
-ogr2ogr -f "GPKG" /home/osmdata/gpkg/natural_EPSG4326.gpkg -nln natural_EPSG4326_point PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_point where natural <> ''"
-ogr2ogr -f "GPKG" /home/osmdata/gpkg/natural_EPSG4326.gpkg -nln natural_EPSG4326_line -update PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_linestring where natural <> ''"
-ogr2ogr -f "GPKG" /home/osmdata/gpkg/natural_EPSG4326.gpkg -nln natural_EPSG4326_polygon -update PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_polygon where natural <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/natural_EPSG4326.gpkg -nln natural_EPSG4326_point PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_point where "natural" <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/natural_EPSG4326.gpkg -nln natural_EPSG4326_line -update PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_linestring where "natural" <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/natural_EPSG4326.gpkg -nln natural_EPSG4326_polygon -update PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_polygon where "natural" <> ''"
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
