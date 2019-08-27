@@ -27,14 +27,14 @@ psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
 
-#address is not working here
-#./imposm3 import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:**************@localhost/osmdatabase -read planet-latest_address.osm.pbf
-#ogr2ogr -f "GPKG" /home/osmdata/gpkg/address_EPSG4326.gpkg -nln address_EPSG4326_point PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_point where addr <> ''"
-#ogr2ogr -f "GPKG" /home/osmdata/gpkg/address_EPSG4326.gpkg -nln address_EPSG4326_line -update PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_linestring where addr <> ''"
-#ogr2ogr -f "GPKG" /home/osmdata/gpkg/address_EPSG4326.gpkg -nln address_EPSG4326_polygon -update PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_polygon where addr <> ''"
-#psql -d osmdatabase -c "DROP TABLE import.osm_point"
-#psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
-#psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
+
+./imposm3 import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:**************@localhost/osmdatabase -read planet-latest_address.osm.pbf
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/address_EPSG4326.gpkg -nln address_EPSG4326_point PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_point where 'addr' <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/address_EPSG4326.gpkg -nln address_EPSG4326_line -update PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_linestring where 'addr' <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/address_EPSG4326.gpkg -nln address_EPSG4326_polygon -update PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_polygon where 'addr' <> ''"
+psql -d osmdatabase -c "DROP TABLE import.osm_point"
+psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
+psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
 
 ./imposm3 import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:**************@localhost/osmdatabase -read planet-latest_landuse.osm.pbf
 ogr2ogr -f "GPKG" /home/osmdata/gpkg/landuse_EPSG4326.gpkg -nln landuse_EPSG4326_point PG:"host=localhost dbname=osmdatabase user=postgres password=**************" -sql "select * from import.osm_point where landuse <> ''"
