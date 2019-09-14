@@ -1,3 +1,5 @@
+![osmdata.xyz logo](https://github.com/michaelmgis/osmdata.xyz/blob/master/power_logo_github_300dpi.png)
+
 # osmdata.xyz | global osm extracts
 This project deals with extracting all primary features regarding the openstreetmap project and their related tags to geopackage.
 
