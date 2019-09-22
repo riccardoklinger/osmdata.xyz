@@ -476,6 +476,12 @@ tables:
     - key: telecom
       name: telecom
       type: string
+    - key: internet_access
+      name: internet_access
+      type: string
+    - key: wifi
+      name: wifi
+      type: string
     - key: timestamp
       name: timestamp
       type: string
@@ -509,6 +515,9 @@ tables:
        aerialway: [__any__]
        geological: [__any__]
        telecom: [__any__]
+       internet_access: [__any__]
+       wifi: [__any__]
+       timestamp: [__any__]
   linestring:
     load_all: true
     type: linestring
@@ -986,6 +995,12 @@ tables:
     - key: telecom
       name: telecom
       type: string
+    - key: internet_access
+      name: internet_access
+      type: string
+    - key: wifi
+      name: wifi
+      type: string
     - key: timestamp
       name: timestamp
       type: string
@@ -1019,6 +1034,9 @@ tables:
        aerialway: [__any__]
        geological: [__any__]
        telecom: [__any__]
+       internet_access: [__any__]
+       wifi: [__any__]
+       timestamp: [__any__]
   polygon:
     load_all: true
     type: polygon
@@ -1496,6 +1514,12 @@ tables:
     - key: telecom
       name: telecom
       type: string
+    - key: internet_access
+      name: internet_access
+      type: string
+    - key: wifi
+      name: wifi
+      type: string
     - key: timestamp
       name: timestamp
       type: string
@@ -1529,3 +1553,6 @@ tables:
        aerialway: [__any__]
        geological: [__any__]
        telecom: [__any__]
+       internet_access: [__any__]
+       wifi: [__any__]
+       timestamp: [__any__]
