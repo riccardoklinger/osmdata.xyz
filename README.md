@@ -20,7 +20,7 @@ This project is intended to provide the OpenStreetMap data for the whole world d
 This project is my hobby and absolutely non-commercial. I'm happy to share open data, knowledge and insights.
 
 ## Statistics and explanation of the approach
-The processing chain published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map element (e.g. building) is created individually. Intermediate products are deleted to save storage space.
+The processing chain published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
 
 **Example: "building" as excerpt with the highest storage usage**
 A maximum of 532GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
