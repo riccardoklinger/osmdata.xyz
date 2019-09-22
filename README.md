@@ -23,7 +23,6 @@ This project is my hobby and absolutely non-commercial. I'm happy to share open 
 The processing chain published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map element (e.g. building) is created individually. Intermediate products are deleted to save storage space.
 
 **Example: "building" as excerpt with the highest storage usage**
-
 A maximum of 532GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
 
 |Type|Size|
@@ -34,8 +33,8 @@ A maximum of 532GB of storage space is required to create the largest data set "
 |Building GPKG|214,40 GB|
 |Sum|848,40 GB|
 
-**Example: entire global data set is stored in a database - extract of buildings**
 
+**Example: entire global data set is stored in a database - extract of buildings**
 A maximum of 850GB of storage is required to create the largest data set "building".
 
 |Type|Size|
