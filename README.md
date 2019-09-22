@@ -31,7 +31,7 @@ A maximum of 532GB of storage space is required to create the largest data set "
 |impcache|92,00 GB|
 |PostGIS database|495,00 GB|
 |Building GPKG|214,40 GB|
-|Sum|848,40 GB|
+|**Sum|848,40 GB**|
 
 
 **Example: entire global data set is stored in a database - extract of buildings**
@@ -43,7 +43,7 @@ A maximum of 850GB of storage is required to create the largest data set "buildi
 |impcache|33,50 GB|
 |PostGIS database|234,40 GB|
 |Building GPKG|214,40 GB|
-|Sum|532,30 GB|
+|**Sum|532,30 GB**|
 
 
 **Conclusion**
