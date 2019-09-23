@@ -23,28 +23,27 @@ This project is my hobby and absolutely non-commercial. I'm happy to share open 
 The processing chain published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
 
 **Example: "building" as excerpt with the highest storage usage**
-A maximum of 532GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
-
-|Type|Size|
-| ------------- | ------------- |
-|PBF|47,00 GB|
-|impcache|92,00 GB|
-|PostGIS database|495,00 GB|
-|Building GPKG|214,40 GB|
-|**Sum**|**848,40 GB**|
-
-
-**Example: entire global data set is stored in a database - extract of buildings**
-A maximum of 850GB of storage is required to create the largest data set "building".
+A maximum of 608 GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
 
 |Type|Size|
 | ------------- | ------------- |
 |all PBF files|50,00 GB|
 |impcache|33,50 GB|
 |PostGIS database|234,40 GB|
-|Building GPKG|214,40 GB|
-|**Sum**|**532,30 GB**|
+|Building GPKG|290,00 GB|
+|**Sum**|**607,90 GB**|
 
+
+**Example: entire global data set is stored in a database - extract of buildings**
+A maximum of 924 GB of storage is required to create the largest data set "building".
+
+|Type|Size|
+| ------------- | ------------- |
+|PBF|47,00 GB|
+|impcache|92,00 GB|
+|PostGIS database|495,00 GB|
+|Building GPKG|290,00 GB|
+|**Sum**|**924,00 GB**|
 
 **Conclusion**
 If storage space plays a role, then the approach published here is recommended. If there is enough memory, you can skip the step of splitting the PBF files (03_osm_filter) and just transfer everything to the database.
