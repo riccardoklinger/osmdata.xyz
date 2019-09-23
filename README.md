@@ -23,9 +23,7 @@ This project is my hobby and absolutely non-commercial. I'm happy to share open 
 The processing chain published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
 
 
-**Example: "building" as extract with the highest storage usage**
-
-A maximum of 608 GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
+**Example: "building" as extract with the highest storage usage**: A maximum of 608 GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
 
 |Type|Size|
 | ------------- | ------------- |
@@ -36,9 +34,7 @@ A maximum of 608 GB of storage space is required to create the largest data set 
 |**Sum**|**607,90 GB**|
 
 
-**Example: entire global data set is stored in a database - extract of buildings**
-
-A maximum of 924 GB of storage is required to create the largest data set "building".
+**Example: entire global data set is stored in a database - extract of buildings**: A maximum of 924 GB of storage is required to create the largest data set "building".
 
 |Type|Size|
 | ------------- | ------------- |
@@ -48,8 +44,7 @@ A maximum of 924 GB of storage is required to create the largest data set "build
 |Building GPKG|290,00 GB|
 |**Sum**|**924,00 GB**|
 
-**Conclusion**
-If storage space plays a role, then the approach published here is recommended. If there is enough memory, you can skip the step of splitting the PBF files (03_osm_filter) and just transfer everything to the database.
+**Conclusion**: If storage space plays a role, then the approach published here is recommended. If there is enough memory, you can skip the step of splitting the PBF files (03_osm_filter) and just transfer everything to the database.
 
 ## Utilized tools to create extracts
 - imposm3 --> https://github.com/omniscale/imposm3 (see Version 2 since 20190805)
