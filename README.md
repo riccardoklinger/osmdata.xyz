@@ -22,7 +22,8 @@ This project is my hobby and absolutely non-commercial. I'm happy to share open 
 ## Statistics and explanation of the approach
 The processing chain published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
 
-**Example: "building" as excerpt with the highest storage usage**
+
+**Example: "building" as extract with the highest storage usage**
 
 A maximum of 608 GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
 
