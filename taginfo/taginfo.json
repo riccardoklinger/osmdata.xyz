@@ -1,131 +1,131 @@
    {
-       "data_format": 1,           # data format version, currently always 1, will get updated if there are incompatible changes to the format (required)
-       "data_url": "https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/taginfo/taginfo.json",          # this should be the URL under which this project file can be accessed (optional)
-       "project": {                # meta information about the project (required)
-           "name": "osmdata.xyz",          # name of the project (required)
-           "description": "openstreetmap data extracts for each primary map feature on a global scale as GeoPackage",   # short description of the project (required)
-           "project_url": "http://osmdata.xyz",   # home page of the project with general information (required)
-           "doc_url": "https://github.com/michaelmgis/osmdata.xyz",       # documentation of the project and especially the tags used (optional)
-           "icon_url": "https://download.osmdata.xyz/favicon-16x16.png",      # project logo, should work in 16x16 pixels on white and light gray backgrounds (optional)
-           "contact_name": "Michael Marz",  # contact name, needed for taginfo maintainer (required)
-           "contact_email": "hello@osmdata.xyz"  # contact email, needed for taginfo maintainer (required)
+       "data_format": 1,
+       "data_url": "https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/taginfo/taginfo.json",
+       "project": {
+           "name": "osmdata.xyz",
+           "description": "openstreetmap data extracts for each primary map feature on a global scale as GeoPackage",
+           "project_url": "http://osmdata.xyz",
+           "doc_url": "https://github.com/michaelmgis/osmdata.xyz",
+           "icon_url": "https://download.osmdata.xyz/favicon-16x16.png",
+           "contact_name": "Michael Marz",
+           "contact_email": "hello@osmdata.xyz"
        },
        "tags": [			  # list of keys and tags used (see below)
 		   {
-		   "key": "building",          # OSM tag key (required)
+		   "key": "building",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "highway",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "aerialway",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "aeroway",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "amenity", 
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "barrier",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "boundary",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "craft",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "emergency",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "geological",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "historic",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "leisure",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "landuse",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "man_made",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "military",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "natural",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "office",
+		   "object_types": ["node", "way", "area"],
+		   },
+		   {
+		   "key": "place",
 		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
 		   },
 		   {
-		   "key": "highway",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "power",
+		   "object_types": ["node", "way", "area"],
 		   },
 		   {
-		   "key": "aerialway",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "public_transport",
+		   "object_types": ["node", "way", "area"],
 		   },
 		   {
-		   "key": "aeroway",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "railway",
+		   "object_types": ["node", "way", "area"],
 		   },
 		   {
-		   "key": "amenity",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "route",
+		   "object_types": ["node", "way", "area"],
 		   },
 		   {
-		   "key": "barrier",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "shop",
+		   "object_types": ["node", "way", "area"],
 		   },
 		   {
-		   "key": "boundary",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "sport",
+		   "object_types": ["node", "way", "area"],
 		   },
 		   {
-		   "key": "craft",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "telecom",
+		   "object_types": ["node", "way", "area"],
 		   },
 		   {
-		   "key": "emergency",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "tourism",
+		   "object_types": ["node", "way", "area"],
 		   },
 		   {
-		   "key": "geological",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "waterway",
+		   "object_types": ["node", "way", "area"],
 		   },
 		   {
-		   "key": "historic",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "addr:",
+		   "object_types": ["node", "way", "area"],
 		   },
 		   {
-		   "key": "leisure",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "landuse",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "man_made",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "military",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "natural",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "office",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "place",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "power",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "public_transport",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "railway",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "route",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "shop",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "sport",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "telecom",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "tourism",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "waterway",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "addr:",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
-		   },
-		   {
-		   "key": "water",          # OSM tag key (required)
-		   "object_types": ["node", "way", "area"], # OSM object types this key/tag can be used for (optional, see below)
+		   "key": "water",
+		   "object_types": ["node", "way", "area"]
 		   }		   
 	   ]               
    }
