@@ -1,6 +1,6 @@
    {
        "data_format": 1,           # data format version, currently always 1, will get updated if there are incompatible changes to the format (required)
-       "data_url": "...",          # this should be the URL under which this project file can be accessed (optional)
+       "data_url": "https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/taginfo/taginfo.json",          # this should be the URL under which this project file can be accessed (optional)
        "data_updated": "20191010T101010+0200", # timestamp when project file was updated (optional, will use HTTP header date if not available)
        "project": {                # meta information about the project (required)
            "name": "osmdata.xyz",          # name of the project (required)
