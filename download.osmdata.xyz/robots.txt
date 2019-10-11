@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: /upload/
+Sitemap: https://download.osmdata.xyz/sitemap.xml
