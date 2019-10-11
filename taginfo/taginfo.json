@@ -3,10 +3,10 @@
        "data_url": "https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/taginfo/taginfo.json",
        "project": {
            "name": "osmdata.xyz",
-           "description": "openstreetmap data extracts for each primary map feature on a global scale as GeoPackage",
+           "description": "OpenStreetMap data extracts for each primary feature on a global scale as GeoPackages",
            "project_url": "http://osmdata.xyz",
            "doc_url": "https://github.com/michaelmgis/osmdata.xyz",
-           "icon_url": "https://download.osmdata.xyz/favicon-16x16.png",
+           "icon_url": "https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/download.osmdata.xyz/favicon-16x16.png",
            "contact_name": "Michael Marz",
            "contact_email": "hello@osmdata.xyz"
        },
