@@ -11,11 +11,7 @@ ogr2ogr -f "GPKG" /mnt/HC_Volume_3211295/gpkg/building_EPSG4326.gpkg -nln buildi
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /mnt/HC_Volume_3211295/gpkg/building_EPSG4326.zip /mnt/HC_Volume_3211295/gpkg/building_EPSG4326.gpkg
-rm /mnt/HC_Volume_3211295/gpkg/building_EPSG4326.gpkg
-cd /mnt/HC_Volume_3211295/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/20190902/
-rm /mnt/HC_Volume_3211295/gpkg/*.zip
+
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_highway.osm.pbf
@@ -25,11 +21,7 @@ ogr2ogr -f "GPKG" /mnt/HC_Volume_3211295/gpkg/highway_EPSG4326.gpkg -nln highway
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /mnt/HC_Volume_3211295/gpkg/highway_EPSG4326.zip /mnt/HC_Volume_3211295/gpkg/highway_EPSG4326.gpkg
-rm /mnt/HC_Volume_3211295/gpkg/highway_EPSG4326.gpkg
-cd /mnt/HC_Volume_3211295/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/20190902/
-rm /mnt/HC_Volume_3211295/gpkg/*.zip
+
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_natural.osm.pbf
@@ -39,11 +31,7 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/natural_EPSG4326.gpkg -nln natural_EPSG4326
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/natural_EPSG4326.zip /home/osmdata/gpkg/natural_EPSG4326.gpkg
-rm /home/osmdata/gpkg/natural_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
+
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_address.osm.pbf
@@ -53,11 +41,7 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/address_EPSG4326.gpkg -nln address_EPSG4326
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/address_EPSG4326.zip /home/osmdata/gpkg/address_EPSG4326.gpkg
-rm /home/osmdata/gpkg/address_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
+
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_landuse.osm.pbf
@@ -67,11 +51,7 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/landuse_EPSG4326.gpkg -nln landuse_EPSG4326
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/landuse_EPSG4326.zip /home/osmdata/gpkg/landuse_EPSG4326.gpkg
-rm /home/osmdata/gpkg/landuse_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
+
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_waterway.osm.pbf
@@ -81,11 +61,7 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/waterway_EPSG4326.gpkg -nln waterway_EPSG43
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/waterway_EPSG4326.zip /home/osmdata/gpkg/waterway_EPSG4326.gpkg
-rm /home/osmdata/gpkg/waterway_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
+
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_boundary.osm.pbf
@@ -95,11 +71,7 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/boundary_EPSG4326.gpkg -nln boundary_EPSG43
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/boundary_EPSG4326.zip /home/osmdata/gpkg/boundary_EPSG4326.gpkg
-rm /home/osmdata/gpkg/boundary_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
+
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_route.osm.pbf
@@ -109,12 +81,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/route_EPSG4326.gpkg -nln route_EPSG4326_pol
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/route_EPSG4326.zip /home/osmdata/gpkg/route_EPSG4326.gpkg
-rm /home/osmdata/gpkg/route_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
-
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_amenity.osm.pbf
@@ -124,11 +90,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/amenity_EPSG4326.gpkg -nln amenity_EPSG4326
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/amenity_EPSG4326.zip /home/osmdata/gpkg/amenity_EPSG4326.gpkg
-rm /home/osmdata/gpkg/amenity_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_place.osm.pbf
@@ -138,11 +99,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/place_EPSG4326.gpkg -nln place_EPSG4326_pol
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/place_EPSG4326.zip /home/osmdata/gpkg/place_EPSG4326.gpkg
-rm /home/osmdata/gpkg/place_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_leisure.osm.pbf
@@ -152,11 +108,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/leisure_EPSG4326.gpkg -nln leisure_EPSG4326
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/leisure_EPSG4326.zip /home/osmdata/gpkg/leisure_EPSG4326.gpkg
-rm /home/osmdata/gpkg/leisure_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_water.osm.pbf
@@ -166,11 +117,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/water_EPSG4326.gpkg -nln water_EPSG4326_pol
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/water_EPSG4326.zip /home/osmdata/gpkg/water_EPSG4326.gpkg
-rm /home/osmdata/gpkg/water_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_power.osm.pbf
@@ -180,11 +126,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/power_EPSG4326.gpkg -nln power_EPSG4326_pol
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/power_EPSG4326.zip /home/osmdata/gpkg/power_EPSG4326.gpkg
-rm /home/osmdata/gpkg/power_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_barrier.osm.pbf
@@ -194,11 +135,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/barrier_EPSG4326.gpkg -nln barrier_EPSG4326
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/barrier_EPSG4326.zip /home/osmdata/gpkg/barrier_EPSG4326.gpkg
-rm /home/osmdata/gpkg/barrier_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_railway.osm.pbf
@@ -208,11 +144,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/railway_EPSG4326.gpkg -nln railway_EPSG4326
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/railway_EPSG4326.zip /home/osmdata/gpkg/railway_EPSG4326.gpkg
-rm /home/osmdata/gpkg/railway_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_man_made.osm.pbf
@@ -222,11 +153,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/man_made_EPSG4326.gpkg -nln man_made_EPSG43
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/man_made_EPSG4326.zip /home/osmdata/gpkg/man_made_EPSG4326.gpkg
-rm /home/osmdata/gpkg/man_made_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_shop.osm.pbf
@@ -236,11 +162,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/shop_EPSG4326.gpkg -nln shop_EPSG4326_polyg
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/shop_EPSG4326.zip /home/osmdata/gpkg/shop_EPSG4326.gpkg
-rm /home/osmdata/gpkg/shop_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_sport.osm.pbf
@@ -250,11 +171,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/sport_EPSG4326.gpkg -nln sport_EPSG4326_pol
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/sport_EPSG4326.zip /home/osmdata/gpkg/sport_EPSG4326.gpkg
-rm /home/osmdata/gpkg/sport_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_tourism.osm.pbf
@@ -264,11 +180,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/tourism_EPSG4326.gpkg -nln tourism_EPSG4326
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/tourism_EPSG4326.zip /home/osmdata/gpkg/tourism_EPSG4326.gpkg
-rm /home/osmdata/gpkg/tourism_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_public_transport.osm.pbf
@@ -278,11 +189,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/public_transport_EPSG4326.gpkg -nln public_
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/public_transport_EPSG4326.zip /home/osmdata/gpkg/public_transport_EPSG4326.gpkg
-rm /home/osmdata/gpkg/public_transport_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_historic.osm.pbf
@@ -292,11 +198,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/historic_EPSG4326.gpkg -nln historic_EPSG43
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/historic_EPSG4326.zip /home/osmdata/gpkg/historic_EPSG4326.gpkg
-rm /home/osmdata/gpkg/historic_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_emergency.osm.pbf
@@ -306,12 +207,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/emergency_EPSG4326.gpkg -nln emergency_EPSG
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/emergency_EPSG4326.zip /home/osmdata/gpkg/emergency_EPSG4326.gpkg
-rm /home/osmdata/gpkg/emergency_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
-
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_office.osm.pbf
@@ -321,11 +216,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/office_EPSG4326.gpkg -nln office_EPSG4326_p
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/office_EPSG4326.zip /home/osmdata/gpkg/office_EPSG4326.gpkg
-rm /home/osmdata/gpkg/office_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_aeroway.osm.pbf
@@ -335,11 +225,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/aeroway_EPSG4326.gpkg -nln aeroway_EPSG4326
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/aeroway_EPSG4326.zip /home/osmdata/gpkg/aeroway_EPSG4326.gpkg
-rm /home/osmdata/gpkg/aeroway_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_craft.osm.pbf
@@ -349,11 +234,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/craft_EPSG4326.gpkg -nln craft_EPSG4326_pol
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/craft_EPSG4326.zip /home/osmdata/gpkg/craft_EPSG4326.gpkg
-rm /home/osmdata/gpkg/craft_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_military.osm.pbf
@@ -363,11 +243,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/military_EPSG4326.gpkg -nln military_EPSG43
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/military_EPSG4326.zip /home/osmdata/gpkg/military_EPSG4326.gpkg
-rm /home/osmdata/gpkg/military_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_aerialway.osm.pbf
@@ -377,11 +252,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/aerialway_EPSG4326.gpkg -nln aerialway_EPSG
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/aerialway_EPSG4326.zip /home/osmdata/gpkg/aerialway_EPSG4326.gpkg
-rm /home/osmdata/gpkg/aerialway_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_geological.osm.pbf
@@ -391,11 +261,6 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/geological_EPSG4326.gpkg -nln geological_EP
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/geological_EPSG4326.zip /home/osmdata/gpkg/geological_EPSG4326.gpkg
-rm /home/osmdata/gpkg/geological_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_telecom.osm.pbf
@@ -405,8 +270,3 @@ ogr2ogr -f "GPKG" /home/osmdata/gpkg/telecom_EPSG4326.gpkg -nln telecom_EPSG4326
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
-7z a -tzip -mmt=on -mx=1 /home/osmdata/gpkg/telecom_EPSG4326.zip /home/osmdata/gpkg/telecom_EPSG4326.gpkg
-rm /home/osmdata/gpkg/telecom_EPSG4326.gpkg
-cd /home/osmdata/gpkg/
-wput *.zip ftp://flmxgkf:KTkXNZMn5kC5@ftp.cluster020.hosting.ovh.net/osmdata/upload/
-rm /home/osmdata/gpkg/*.zip
