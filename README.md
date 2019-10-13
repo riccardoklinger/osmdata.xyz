@@ -3,8 +3,6 @@
 # osmdata.xyz | global osm extracts
 This project deals with extracting all primary features regarding the openstreetmap project and their related tags to geopackage.
 
-UPDATE - New processing chain: imposm3 is used since the extracts from 20190805 - see Version 2.
-
 ## Extracts are available on
 https://download.osmdata.xyz/
 
@@ -65,6 +63,7 @@ The processing chain published here is designed to reduce storage consumption as
   - new tags: internet_access, wifi
 - 08.2019
   - all geometries of each map feature are stored in one GeoPackage
+  - new processing chain - imposm3 is used since the extracts from 20190805 - see Version 2.
 
 ## Copyright and License 
 OpenStreetMap© is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF). 
