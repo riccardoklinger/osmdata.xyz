@@ -72,3 +72,4 @@ https://www.openstreetmap.org/copyright/en
 
 ## Happy about feedback
 Let me know, if you are happy or what could be improved.
+Please post an issue or write to hello@osmdata.xyz 
