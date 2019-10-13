@@ -5,9 +5,9 @@
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_building.osm.pbf
-ogr2ogr -f "GPKG" /mnt/HC_Volume_3211295/gpkg/building_EPSG4326.gpkg -nln building_EPSG4326_point -nlt POINT PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_point where building <> ''"
-ogr2ogr -f "GPKG" /mnt/HC_Volume_3211295/gpkg/building_EPSG4326.gpkg -nln building_EPSG4326_line -nlt LINESTRING -update PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_linestring where building <> ''"
-ogr2ogr -f "GPKG" /mnt/HC_Volume_3211295/gpkg/building_EPSG4326.gpkg -nln building_EPSG4326_polygon -nlt POLYGON -update PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_polygon where building <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/building_EPSG4326.gpkg -nln building_EPSG4326_point -nlt POINT PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_point where building <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/building_EPSG4326.gpkg -nln building_EPSG4326_line -nlt LINESTRING -update PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_linestring where building <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/building_EPSG4326.gpkg -nln building_EPSG4326_polygon -nlt POLYGON -update PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_polygon where building <> ''"
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
@@ -15,9 +15,9 @@ psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
 
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://postgres:*******@localhost/osmdatabase -read planet-latest_highway.osm.pbf
-ogr2ogr -f "GPKG" /mnt/HC_Volume_3211295/gpkg/highway_EPSG4326.gpkg -nln highway_EPSG4326_point -nlt POINT PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_point where highway <> ''"
-ogr2ogr -f "GPKG" /mnt/HC_Volume_3211295/gpkg/highway_EPSG4326.gpkg -nln highway_EPSG4326_line -nlt LINESTRING -update PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_linestring where highway <> ''"
-ogr2ogr -f "GPKG" /mnt/HC_Volume_3211295/gpkg/highway_EPSG4326.gpkg -nln highway_EPSG4326_polygon -nlt POLYGON -update PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_polygon where highway <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/highway_EPSG4326.gpkg -nln highway_EPSG4326_point -nlt POINT PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_point where highway <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/highway_EPSG4326.gpkg -nln highway_EPSG4326_line -nlt LINESTRING -update PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_linestring where highway <> ''"
+ogr2ogr -f "GPKG" /home/osmdata/gpkg/highway_EPSG4326.gpkg -nln highway_EPSG4326_polygon -nlt POLYGON -update PG:"host=localhost dbname=osmdatabase user=postgres password=postgres" -sql "select * from import.osm_polygon where highway <> ''"
 psql -d osmdatabase -c "DROP TABLE import.osm_point"
 psql -d osmdatabase -c "DROP TABLE import.osm_linestring"
 psql -d osmdatabase -c "DROP TABLE import.osm_polygon"
