@@ -58,6 +58,11 @@ The processing chain published here is designed to reduce storage consumption as
 - primary (map) features? --> https://wiki.openstreetmap.org/wiki/Map_Features
 - planet file as osm.pbf --> https://planet.openstreetmap.org/
 
+## Recent improvements and changes
+
+- 10.2019: definition of geometrytype improve reading the content of a GeoPackage with QGIS; New Tags: internet_access, wifi
+- 08.2019: all geometries of each map feature are stored in one GeoPackage
+
 ## Copyright and License 
 OpenStreetMap© is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF). 
 https://www.openstreetmap.org/copyright/en
