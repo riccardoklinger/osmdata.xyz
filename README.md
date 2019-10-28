@@ -15,7 +15,7 @@ OpenStreetMap (OSM) offers an amazing collection of data. The information contai
 
 This project is intended to provide the OpenStreetMap data for the whole world directly usable in a GIS. The data extracts are based on the primary map features. Each extract represents a key value (e.g. building or highway), whereby all prepared tags are always contained in the same way (see. mapping.yml). This way you can also discover interesting findings.
 
-This project is my hobby and absolutely non-commercial. I'm happy to share open data, knowledge and insights.
+osmdata.xyz is my hobby and absolutely non-commercial. I'm happy to share open data, knowledge and insights.
 
 ## Statistics and explanation of the approach
 The processing chain published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
