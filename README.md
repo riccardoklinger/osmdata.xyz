@@ -39,7 +39,7 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_impos
   - new processing chain - imposm3 is used since the extracts from 20190805 - see [Version 2](https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_imposm3).
 
 ## Approach and statistics
-The processing chain published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
+The [processing chain](https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_imposm3) published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
 
 **Example 1 - current workflow: "building" as extract with the highest storage usage**: A maximum of 608 GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
 
