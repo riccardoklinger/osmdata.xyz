@@ -1,5 +1,5 @@
 | Name | File | Size of ZIP approx. | Size of GeoPackage approx. | Last update dd.mm.yyyy |
-|:----------------:|:----------------------------------------------------------------------------------------------:|:-------------------:|:--------------------------:|:----------------------:|
+|----------------|----------------------------------------------------------------------------------------------|-------------------:|--------------------------:|----------------------:|
 | Building | [building_EPSG4326.zip](https://download.osmdata.xyz/data/building_EPSG4326.zip) | 65 GB | 283 GB | 07.10.2019 |
 | Highway | [highway_EPSG4326.zip](https://download.osmdata.xyz/data/highway_EPSG4326.zip) | 26 GB | 77 GB | 07.10.2019 |
 | Address | [address_EPSG4326.zip](https://download.osmdata.xyz/data/address_EPSG4326.zip) | 13 GB | 40 GB | 07.10.2019 |
