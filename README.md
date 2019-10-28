@@ -1,7 +1,7 @@
 ![osmdata.xyz logo](https://github.com/michaelmgis/osmdata.xyz/blob/master/logos/osmdata_logo_power_wide_300dpi.png)
 
 # osmdata.xyz | global osm extracts
-This project deals with extracting all primary features regarding the OpenStreetMap project and their related tags. The data sets are provided as Geopackage. Each extract represents a key value (e.g. building or highway), whereby all prepared tags are always contained in the same way (see. mapping.yml).
+This project provides global data extracts based on OpenStreetMap data as GeoPackages. Each extract represents its related primary feature respectively key value regarding the OpenStreetMap project. Every GeoPackage contains the three types of geometries: point, line and polygon. For each primary feature all prepared tags are always contained in the same way (see mapping.yml).
 
 ## Extracts are available on
 https://download.osmdata.xyz/
