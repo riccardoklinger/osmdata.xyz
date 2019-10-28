@@ -1,7 +1,7 @@
 ![osmdata.xyz logo](https://github.com/michaelmgis/osmdata.xyz/blob/master/logos/osmdata_logo_power_wide_300dpi.png)
 
 # osmdata.xyz | global osm extracts
-This project deals with extracting all primary features regarding the OpenStreetMap project and their related tags to Geopackage.
+This project deals with extracting all primary features regarding the OpenStreetMap project and their related tags. The data sets are provided as Geopackage.
 
 ## Extracts are available on
 https://download.osmdata.xyz/
