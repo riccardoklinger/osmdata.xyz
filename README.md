@@ -16,7 +16,7 @@ OpenStreetMap (OSM) offers an amazing collection of data. The information contai
 osmdata.xyz is my hobby and absolutely non-commercial. I'm happy to share open data, knowledge and insights.
 
 ## Utilized tools to create extracts
-Work flow: https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_imposm3
+Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_imposm3
 
 - imposm3 --> https://github.com/omniscale/imposm3 (see Version 2 since 20190805)
 - PostGIS / PostgreSQL --> https://postgis.net/
@@ -38,10 +38,10 @@ Work flow: https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_impo
   - all geometries of each map feature are stored in one GeoPackage
   - new processing chain - imposm3 is used since the extracts from 20190805 - see Version 2.
 
-## Statistics and explanation of the approach
+## Approach and statistics
 The processing chain published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
 
-**Example: "building" as extract with the highest storage usage**: A maximum of 608 GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
+**Example 1 - current workflow: "building" as extract with the highest storage usage**: A maximum of 608 GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
 
 |Type|Size|
 | ------------- | ------------- |
@@ -52,7 +52,7 @@ The processing chain published here is designed to reduce storage consumption as
 |**Sum**|**607,90 GB**|
 
 
-**Example: entire global data set is stored in a database - extract of buildings**: A maximum of 924 GB of storage is required to create the largest data set "building".
+**Example 2 - entire global data set is stored in a database - extract of buildings**: A maximum of 924 GB of storage is required to create the largest data set "building".
 
 |Type|Size|
 | ------------- | ------------- |
