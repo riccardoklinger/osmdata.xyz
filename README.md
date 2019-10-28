@@ -36,7 +36,7 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_impos
   - new tags: internet_access, wifi
 - 08.2019
   - all geometries of each map feature are stored in one GeoPackage
-  - new processing chain - imposm3 is used since the extracts from 20190805 - see Version 2.
+  - new processing chain - imposm3 is used since the extracts from 20190805 - see [Version 2](https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_imposm3).
 
 ## Approach and statistics
 The processing chain published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
