@@ -66,7 +66,7 @@ The [processing chain](https://github.com/michaelmgis/osmdata.xyz/tree/master/Ve
 **Conclusion**: If storage space plays a role, then the approach published here is recommended. If there is enough memory, you can skip the step of splitting the PBF files (03_osm_filter) and just transfer everything to the database.
 
 ## Copyright and License 
-OpenStreetMap© is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF). 
+OpenStreetMap© is open data, licensed under the [Open Data Commons Open Database License](https://opendatacommons.org/licenses/odbl/) (ODbL) by the [OpenStreetMap Foundation](https://osmfoundation.org/) (OSMF). 
 https://www.openstreetmap.org/copyright/en
 
 ## Happy about feedback
