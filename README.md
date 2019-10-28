@@ -1,7 +1,7 @@
 ![osmdata.xyz logo](https://github.com/michaelmgis/osmdata.xyz/blob/master/logos/osmdata_logo_power_wide_300dpi.png)
 
 # osmdata.xyz | global osm extracts
-This project deals with extracting all primary features regarding the OpenStreetMap project and their related tags. The data sets are provided as Geopackage.
+This project deals with extracting all primary features regarding the OpenStreetMap project and their related tags. The data sets are provided as Geopackage. Each extract represents a key value (e.g. building or highway), whereby all prepared tags are always contained in the same way (see. mapping.yml).
 
 ## Extracts are available on
 https://download.osmdata.xyz/
@@ -13,11 +13,11 @@ Projection of the geodata: WGS 84 | EPSG 4326 | https://spatialreference.org/ref
 ## Why
 OpenStreetMap (OSM) offers an amazing collection of data. The information contained provides many possibilities to better understand the whole world, e.g. with the use of a geographic information system (GIS). There are many tools to create small extracts from the OSM data: overpass-turbo (API) or other tools in QGIS/ArcGIS. A bigger challenge is the creation of ready to use GIS-compatible data sets from OSM, which cover whole countries, continents or even the whole world.
 
-This project is intended to provide the OpenStreetMap data for the whole world directly usable in a GIS. The data extracts are based on the primary map features. Each extract represents a key value (e.g. building or highway), whereby all prepared tags are always contained in the same way (see. mapping.yml). This way you can also discover interesting findings.
-
 osmdata.xyz is my hobby and absolutely non-commercial. I'm happy to share open data, knowledge and insights.
 
 ## Utilized tools to create extracts
+Work flow: https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_imposm3
+
 - imposm3 --> https://github.com/omniscale/imposm3 (see Version 2 since 20190805)
 - PostGIS / PostgreSQL --> https://postgis.net/
 - osmium --> https://osmcode.org/osmium-tool/
@@ -51,6 +51,7 @@ The processing chain published here is designed to reduce storage consumption as
 |Building GPKG|290,00 GB|
 |**Sum**|**607,90 GB**|
 
+
 **Example: entire global data set is stored in a database - extract of buildings**: A maximum of 924 GB of storage is required to create the largest data set "building".
 
 |Type|Size|
@@ -60,6 +61,7 @@ The processing chain published here is designed to reduce storage consumption as
 |PostGIS database|495,00 GB|
 |Building GPKG|290,00 GB|
 |**Sum**|**924,00 GB**|
+
 
 **Conclusion**: If storage space plays a role, then the approach published here is recommended. If there is enough memory, you can skip the step of splitting the PBF files (03_osm_filter) and just transfer everything to the database.
 
