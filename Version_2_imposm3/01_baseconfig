@@ -1,5 +1,5 @@
 #installation of needed packages | please check the version of postgres and postgis you would like to use.
-apt-get update && apt-get install -y aptitude && aptitude update && aptitude install -y nano axel wput screen p7zip-full osmium-tool htop vnstat gdal-bin postgresql-10-postgis-2.4 postgresql-10-postgis-2.4-scripts
+apt-get update && apt-get install -y aptitude && aptitude update && aptitude install -y nano wget axel wput screen p7zip-full osmium-tool htop vnstat gdal-bin postgresql-10-postgis-2.4 postgresql-10-postgis-2.4-scripts
 
 #add user 'osmdata' for all processes
 adduser osmdata
@@ -26,8 +26,11 @@ mkdir /home/osmdata/impcache/
 
 #Installation of imposm3
 #Download imposm3 here: https://github.com/omniscale/imposm3/releases
-tar -xf *imposm_Download*
-mv *imposm_Download* /home/osmdata/pbf
+#e.g. https://github.com/omniscale/imposm3/releases/download/v0.10.0/imposm-0.10.0-linux-x86-64.tar.gz
+cd /home/osmdata/pbf
+wget https://github.com/omniscale/imposm3/releases/download/v0.10.0/imposm-0.10.0-linux-x86-64.tar.gz
+tar -xf imposm-0.10.0-linux-x86-64.tar.gz
+mv imposm-0.10.0-linux-x86-64.tar.gz/* /home/osmdata/pbf/
 
 #Download the preconfigured mapping.yml
 cd /home/osmdata/pbf
