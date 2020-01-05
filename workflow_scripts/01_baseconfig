@@ -34,4 +34,4 @@ mv imposm-0.10.0-linux-x86-64.tar.gz/* /home/osmdata/pbf/
 
 #Download the preconfigured mapping.yml
 cd /home/osmdata/pbf
-wget https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/Version_2_imposm3/mapping.yml
+wget https://github.com/michaelmgis/osmdata.xyz/raw/master/workflow_scripts/mapping.yml
