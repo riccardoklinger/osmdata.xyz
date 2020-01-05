@@ -21,6 +21,10 @@ then
 	echo "no FTP arguments supplied"
 fi
 
+#getting file creation time:
+timestamp=$(date +%s -r /home/osmdata/bremen-latest.osm.pbf.md5)
+echo $timestamp
+
 #array=( natural office )
 array=( natural building highway landuse waterway boundary route \
 	amenity place leisure water power barrier railway man_made shop \

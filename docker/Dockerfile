@@ -78,6 +78,9 @@ RUN axel -n 3 -a -v https://download.geofabrik.de/europe/germany/bremen-latest.o
     osmium tags-filter bremen-latest.osm.pbf nwr/addr:* -o pbf/bremen-latest_addr.osm.pbf &&\
     osmium tags-filter bremen-latest.osm.pbf nwr/water -o pbf/bremen-latest_water.osm.pbf
 
+#getting md5 file for timestamp
+RUN wget https://download.geofabrik.de/europe/germany/bremen-latest.osm.pbf.md5
+
 # switch USER
 USER postgres
 
