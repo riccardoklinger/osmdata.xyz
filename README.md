@@ -1,7 +1,7 @@
 ![osmdata.xyz logo](https://github.com/michaelmgis/osmdata.xyz/blob/master/logos/osmdata_logo_power_wide_300dpi.png)
 
 # osmdata.xyz | global osm extracts
-This project provides global data extracts based on [OpenStreetMap data](https://planet.openstreetmap.org/) as [GeoPackages](https://www.geopackage.org/). Each extract represents its related [primary feature](https://wiki.openstreetmap.org/wiki/Map_Features) respectively key value regarding the [OpenStreetMap project](https://www.openstreetmap.org/). Every GeoPackage contains the three types of geometries: point, line and polygon. For each primary feature all prepared tags are always contained in the same way (see [mapping.yml](https://github.com/michaelmgis/osmdata.xyz/blob/master/Version_2_imposm3/mapping.yml)).
+This project provides global data extracts based on [OpenStreetMap data](https://planet.openstreetmap.org/) as [GeoPackages](https://www.geopackage.org/). Each extract represents its related [primary feature](https://wiki.openstreetmap.org/wiki/Map_Features) respectively key value regarding the [OpenStreetMap project](https://www.openstreetmap.org/). Every GeoPackage contains the three types of geometries: point, line and polygon. For each primary feature all prepared tags are always contained in the same way (see [mapping.yml](https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_scripts/mapping.yml)).
 
 ## Extracts are available on
 https://download.osmdata.xyz/
@@ -16,14 +16,14 @@ OpenStreetMap (OSM) offers an amazing collection of data. The information contai
 osmdata.xyz is my hobby and absolutely non-commercial. I'm happy to share open data, knowledge and insights.
 
 ## Utilized tools to create extracts
-Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_imposm3
+Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_scripts
 
-- imposm3 --> https://github.com/omniscale/imposm3 (see Version 2 since 20190805)
+- imposm3 --> https://github.com/omniscale/imposm3 (see since 20190805)
 - PostGIS / PostgreSQL --> https://postgis.net/
 - osmium --> https://osmcode.org/osmium-tool/
 - gdal / ogr2ogr --> https://gdal.org/programs/ogr2ogr.html
 
-- osm2pgsql --> https://wiki.openstreetmap.org/wiki/Osm2pgsql (used in Version 1)
+- osm2pgsql --> https://wiki.openstreetmap.org/wiki/Osm2pgsql (used in former [workflows](https://github.com/michaelmgis/osmdata.xyz/tree/master/archive))
 
 ## Data basis
 - primary (map) features? --> https://wiki.openstreetmap.org/wiki/Map_Features
@@ -38,10 +38,10 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_impos
   - new tags: internet_access, wifi
 - 08.2019
   - all geometries of each map feature are stored in one GeoPackage
-  - new processing chain - imposm3 is used since the extracts from 20190805 - see [Version 2](https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_imposm3).
+  - new processing chain - imposm3 is used since the extracts from 20190805 - see [workflow_scripts](https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_scripts).
 
 ## Approach and statistics
-The [processing chain](https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_imposm3) published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
+The [processing chain](https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_scripts) published here is designed to reduce storage consumption as much as possible. Each extract based on the primary map feature (e.g. building) is created individually. Intermediate products are deleted to save storage space.
 
 **Example 1 - current workflow: "building" as extract with the highest storage usage**: A maximum of 608 GB of storage space is required to create the largest data set "building". All other primary map features require significantly less storage. 
 
