@@ -1,0 +1,3 @@
+#Login as osmdata user
+cd /home/osmdata/pbf
+screen -S osmget axel -n 5 -a -v https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf

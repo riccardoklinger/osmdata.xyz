@@ -1,0 +1,131 @@
+   {
+       "data_format": 1,
+       "data_url": "https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/taginfo/taginfo.json",
+       "project": {
+           "name": "osmdata.xyz",
+           "description": "OpenStreetMap data extracts for each primary feature on a global scale as GeoPackages",
+           "project_url": "http://osmdata.xyz",
+           "doc_url": "https://github.com/michaelmgis/osmdata.xyz",
+           "icon_url": "https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/download.osmdata.xyz/favicon-16x16.png",
+           "contact_name": "Michael Marz",
+           "contact_email": "hello@osmdata.xyz"
+       },
+       "tags": [
+		   {
+		   "key": "building",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "highway",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "aerialway",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "aeroway",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "amenity", 
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "barrier",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "boundary",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "craft",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "emergency",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "geological",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "historic",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "leisure",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "landuse",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "man_made",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "military",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "natural",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "office",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "place",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "power",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "public_transport",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "railway",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "route",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "shop",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "sport",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "telecom",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "tourism",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "waterway",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "addr:",
+		   "object_types": ["node", "way", "area"]
+		   },
+		   {
+		   "key": "water",
+		   "object_types": ["node", "way", "area"]
+		   }		   
+	   ]               
+   }

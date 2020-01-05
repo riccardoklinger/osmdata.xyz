@@ -1,0 +1,37 @@
+#installation of needed packages | please check the version of postgres and postgis you would like to use.
+apt-get update && apt-get install -y aptitude && aptitude update && aptitude install -y nano wget axel wput screen p7zip-full osmium-tool htop vnstat gdal-bin postgresql-10-postgis-2.4 postgresql-10-postgis-2.4-scripts
+
+#add user 'osmdata' for all processes
+adduser osmdata
+
+#Configuration of PostGIS
+#Change the password for postgres user. Choose a password at 'YOURPASSWORD'
+sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'YOURPASSWORD';"
+
+#Creating a user in Postgre and setup a database
+sudo -u postgres psql -c "CREATE USER osmdata WITH LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT NOREPLICATION CONNECTION LIMIT -1;"
+sudo -u postgres psql -c "CREATE DATABASE osmdatabase WITH OWNER = osmdata ENCODING = 'UTF8' CONNECTION LIMIT = -1;"
+
+#Setup PostGIS extention and imposm schema
+sudo -u postgres psql -d osmdatabase -c "CREATE EXTENSION postgis;"
+sudo -u postgres psql -d osmdatabase -c "CREATE EXTENSION hstore;"
+sudo -u postgres psql -d osmdatabase -c "CREATE SCHEMA import;"
+sudo -u postgres psql -d osmdatabase -c "ALTER SCHEMA import OWNER TO osmdata;"
+
+##Continue as user 'osmdata', either su osmdata as root or login as user 'osmdata'
+#Creating the directories
+mkdir /home/osmdata/pbf/
+mkdir /home/osmdata/gpkg/
+mkdir /home/osmdata/impcache/
+
+#Installation of imposm3
+#Download imposm3 here: https://github.com/omniscale/imposm3/releases
+#e.g. https://github.com/omniscale/imposm3/releases/download/v0.10.0/imposm-0.10.0-linux-x86-64.tar.gz
+cd /home/osmdata/pbf
+wget https://github.com/omniscale/imposm3/releases/download/v0.10.0/imposm-0.10.0-linux-x86-64.tar.gz
+tar -xf imposm-0.10.0-linux-x86-64.tar.gz
+mv imposm-0.10.0-linux-x86-64.tar.gz/* /home/osmdata/pbf/
+
+#Download the preconfigured mapping.yml
+cd /home/osmdata/pbf
+wget https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/Version_2_imposm3/mapping.yml

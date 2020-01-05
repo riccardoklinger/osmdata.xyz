@@ -1,0 +1,5 @@
+The next files contains explanations and script parts to create those osm-extracts related to key values. 
+
+The workflow is optimized to save some disk space. Thats why the import of osm.pbf to postgis is done interative.
+
+Empty fields are stored as "empty field" and not as "NULL".

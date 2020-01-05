@@ -1,0 +1,31 @@
+| Name | File | ZIP size MB approx. | GeoPackage size MB approx. | Last update dd.mm.yyyy |
+|------------------|-------------------------------|---------------------:|----------------------------:|------------------------:|
+| Address | [address_EPSG4326.zip](https://download.osmdata.xyz/data/address_EPSG4326.zip) | 13.682 | 49.009 | 02.12.2019 |
+| Aerialway | [aerialway_EPSG4326.zip](https://download.osmdata.xyz/data/aerialway_EPSG4326.zip) | 7 | 32 | 02.12.2019 |
+| Aeroway | [aeroway_EPSG4326.zip](https://download.osmdata.xyz/data/aeroway_EPSG4326.zip) | 82 | 253 | 02.12.2019 |
+| Amenity | [amenity_EPSG4326.zip](https://download.osmdata.xyz/data/amenity_EPSG4326.zip) | 2.665 | 8.547 | 02.12.2019 |
+| Barrier | [barrier_EPSG4326.zip](https://download.osmdata.xyz/data/barrier_EPSG4326.zip) | 1.207 | 4.486 | 02.12.2019 |
+| Boundary | [boundary_EPSG4326.zip](https://download.osmdata.xyz/data/boundary_EPSG4326.zip) | 4.385 | 7.421 | 02.12.2019 |
+| Building | [building_EPSG4326.zip](https://download.osmdata.xyz/data/building_EPSG4326.zip) | 74.875 | 293.335 | 02.12.2019 |
+| Craft | [craft_EPSG4326.zip](https://download.osmdata.xyz/data/craft_EPSG4326.zip) | 22 | 65 | 02.12.2019 |
+| Emergency | [emergency_EPSG4326.zip](https://download.osmdata.xyz/data/emergency_EPSG4326.zip) | 86 | 414 | 02.12.2019 |
+| Geological | [geological_EPSG4326.zip](https://download.osmdata.xyz/data/geological_EPSG4326.zip) | 7 | 13 | 02.12.2019 |
+| Highway | [highway_EPSG4326.zip](https://download.osmdata.xyz/data/highway_EPSG4326.zip) | 26.568 | 75.409 | 02.12.2019 |
+| Historic | [historic_EPSG4326.zip](https://download.osmdata.xyz/data/historic_EPSG4326.zip) | 171 | 547 | 02.12.2019 |
+| Landuse | [landuse_EPSG4326.zip](https://download.osmdata.xyz/data/landuse_EPSG4326.zip) | 16.168 | 38.364 | 02.12.2019 |
+| Leisure | [leisure_EPSG4326.zip](https://download.osmdata.xyz/data/leisure_EPSG4326.zip) | 1.904 | 5.296 | 02.12.2019 |
+| Man_made | [man_made_EPSG4326.zip](https://download.osmdata.xyz/data/man_made_EPSG4326.zip) | 533 | 1.754 | 02.12.2019 |
+| Military | [military_EPSG4326.zip](https://download.osmdata.xyz/data/military_EPSG4326.zip) | 19 | 57 | 02.12.2019 |
+| Natural | [natural_EPSG4326.zip](https://download.osmdata.xyz/data/natural_EPSG4326.zip) | 19.467 | 45.338 | 02.12.2019 |
+| Office | [office_EPSG4326.zip](https://download.osmdata.xyz/data/office_EPSG4326.zip) | 104 | 312 | 02.12.2019 |
+| Place | [place_EPSG4326.zip](https://download.osmdata.xyz/data/place_EPSG4326.zip) | 1.566 | 3.828 | 02.12.2019 |
+| Power | [power_EPSG4326.zip](https://download.osmdata.xyz/data/power_EPSG4326.zip) | 1.213 | 5.991 | 02.12.2019 |
+| Public_transport | [public_transport_EPSG4326.zip](https://download.osmdata.xyz/data/public_transport_EPSG4326.zip) | 166 | 735 | 02.12.2019 |
+| Railway | [railway_EPSG4326.zip](https://download.osmdata.xyz/data/railway_EPSG4326.zip) | 601 | 1.890 | 02.12.2019 |
+| Route | [route_EPSG4326.zip](https://download.osmdata.xyz/data/route_EPSG4326.zip) | 26 | 61 | 02.12.2019 |
+| Shop | [shop_EPSG4326.zip](https://download.osmdata.xyz/data/shop_EPSG4326.zip) | 531 | 1.754 | 02.12.2019 |
+| Sport | [sport_EPSG4326.zip](https://download.osmdata.xyz/data/sport_EPSG4326.zip) | 460 | 1.418 | 02.12.2019 |
+| Telecom | [telecom_EPSG4326.zip](https://download.osmdata.xyz/data/telecom_EPSG4326.zip) | 2 | 7 | 02.12.2019 |
+| Tourism | [tourism_EPSG4326.zip](https://download.osmdata.xyz/data/tourism_EPSG4326.zip) | 296 | 930 | 02.12.2019 |
+| Water | [water_EPSG4326.zip](https://download.osmdata.xyz/data/water_EPSG4326.zip) | 1.818 | 3.940 | 02.12.2019 |
+| Waterway | [waterway_EPSG4326.zip](https://download.osmdata.xyz/data/waterway_EPSG4326.zip) | 6.552 | 14.628 | 02.12.2019 |
