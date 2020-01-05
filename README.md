@@ -31,6 +31,8 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/Version_2_impos
 
 ## Recent improvements and changes
 
+- 01.2020
+  - [docker workflow](https://github.com/michaelmgis/osmdata.xyz/tree/master/docker)
 - 10.2019
   - definition of geometrytype improve reading the content of a GeoPackage with QGIS
   - new tags: internet_access, wifi
